@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using UniversityAPI.DTOs;
 using UniversityAPI.Services;
@@ -31,7 +32,9 @@ public class StudentsController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [Produces("application/json")]
-    public IActionResult Get(string indexNumber)
+    public IActionResult Get(
+        [RegularExpression(@"^s([0-9]{3,5})$", ErrorMessage = "IndexNumber is invalid, please use a valid format: sXXXXX")]
+        string indexNumber)
     {
         return Ok(_service.Get(indexNumber));
     }

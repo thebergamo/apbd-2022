@@ -35,6 +35,9 @@ public class ExceptionHandlerMiddleware
 
         switch (exception)
         {
+            case RecordNotFoundException:
+                context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                break;
             case ArgumentException:
                 context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 break;
