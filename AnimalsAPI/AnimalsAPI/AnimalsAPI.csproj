@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+      <Content Remove="Utils\**" />
+      <Content Remove="Mappers\**" />
+      <Content Remove="Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Utils\**" />
+      <Compile Remove="Mappers\**" />
+      <Compile Remove="Models\**" />
+      <Compile Remove="WeatherForecast.cs" />
+      <Compile Remove="Controllers\WeatherForecastController.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Utils\**" />
+      <EmbeddedResource Remove="Mappers\**" />
+      <EmbeddedResource Remove="Models\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Utils\**" />
+      <None Remove="Mappers\**" />
+      <None Remove="Models\**" />
+    </ItemGroup>
+
+</Project>
