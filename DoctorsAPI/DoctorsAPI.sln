@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoctorsAPI", "DoctorsAPI\DoctorsAPI.csproj", "{B7D5F990-6A92-4EE1-88F4-A34293B2930E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7D5F990-6A92-4EE1-88F4-A34293B2930E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7D5F990-6A92-4EE1-88F4-A34293B2930E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7D5F990-6A92-4EE1-88F4-A34293B2930E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7D5F990-6A92-4EE1-88F4-A34293B2930E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
